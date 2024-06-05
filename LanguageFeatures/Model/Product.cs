@@ -9,20 +9,15 @@
             Product kayak = new Product
             {
                 Name = "Kayak",
-                Price = 1M
+                Price = 125M
             };
             Product lifejacket = new Product
             {
                 Name = "Lifejacket",
-                Price = 2M
-            };
-            Product veslo = new Product
-            {
-                Name = "Veslo",
-                Price =3M
+                Price = 244M
             };
 
-            return new Product?[] { kayak, lifejacket, veslo };
+            return new Product?[] { kayak, lifejacket,null };
         }
     }
 }
