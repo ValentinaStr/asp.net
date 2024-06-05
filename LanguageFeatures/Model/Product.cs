@@ -14,15 +14,15 @@
             Product lifejacket = new Product
             {
                 Name = "Lifejacket",
-                Price = 1M
+                Price = 2M
             };
             Product veslo = new Product
             {
                 Name = "Veslo",
-                Price = 1M
+                Price =3M
             };
 
-            return new Product?[] { kayak, lifejacket, veslo, null };
+            return new Product?[] { kayak, lifejacket, veslo };
         }
     }
 }

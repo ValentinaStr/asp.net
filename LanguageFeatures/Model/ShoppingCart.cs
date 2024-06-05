@@ -2,11 +2,13 @@
 
 namespace LanguageFeatures.Model
 {
-    public class ShoppingCart : IEnumerable<Product?>
+    public class ShoppingCart : IProductSelection
     {
-        public IEnumerable<Product?>? Products { get; set; }
-        public IEnumerator<Product?> GetEnumerator() => Products?.GetEnumerator() ?? Enumerable.Empty<Product?>().GetEnumerator();
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
+        private List<Product> products = new();
+        public ShoppingCart(params Product[] prods)
+        {
+            products.AddRange(prods);
+        }
+        public IEnumerable<Product>? Products { get => products; }
     }
 }
